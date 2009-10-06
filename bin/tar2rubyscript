@@ -1,0 +1,11 @@
+  gemdir	= File.expand_path("..", File.dirname(__FILE__))
+  realstuff	= File.expand_path("realstuff.rb", gemdir)
+  isapplication	= File.basename(File.dirname(__FILE__)) == "bin"
+
+  if isapplication
+    $_0 = realstuff
+    alias $__0 $0
+    alias $0 $_0
+  end
+
+  load(realstuff)
