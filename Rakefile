@@ -53,4 +53,5 @@ rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
 end
 
+task :build => :build_realstuff
 task 'gemspec:generate' => :build_realstuff
